@@ -1,110 +1,126 @@
-const IGV = 0.18;
+// CONSTRUCTOR
 
-let carrito = [];
-let total = 0;
+function Producto(id, nombre, precio, cantidad){
 
-const productos = [
-    { nombre: "Laptop", precio: 2500 },
-    { nombre: "Mouse", precio: 50 },
-    { nombre: "Teclado", precio: 120 },
-    { nombre: "Audífonos", precio: 180 }
-];
+this.id = id
+this.nombre = nombre
+this.precio = precio
+this.cantidad = cantidad
+this.subtotal = precio * cantidad
 
-// BOTÓN
-
-document.getElementById("btnIniciar")
-    .addEventListener("click", iniciarSimulador);
-
-
-// FUNCIÓN PRINCIPAL
-
-function iniciarSimulador() {
-
-    alert("Bienvenido al simulador");
-    console.log("Simulador iniciado");
-
-    let continuar = true;
-
-    while (continuar) {
-
-        let menu = "Selecciona un producto:\n\n";
-
-        for (let i = 0; i < productos.length; i++) {
-            menu += (i + 1) + ". " + productos[i].nombre +
-                " - S/ " + productos[i].precio + "\n";
-        }
-
-        menu += "0. Finalizar compra";
-
-        let opcion = prompt(menu);
-
-        if (opcion === null) {
-            break;
-        }
-
-        opcion = parseInt(opcion);
-
-        if (opcion === 0) {
-            continuar = false;
-        }
-
-        else if (opcion >= 1 && opcion <= productos.length) {
-
-            let producto = productos[opcion - 1];
-
-            carrito.push(producto);
-            total += producto.precio;
-
-            alert("Agregaste: " + producto.nombre);
-            console.log("Producto agregado:", producto);
-        }
-
-        else {
-            alert("Opción inválida");
-        }
-    }
-
-    mostrarResumen();
 }
 
-// FUNCIÓN RESUMEN
 
-function mostrarResumen() {
+// ARRAY DE PRODUCTOS
 
-    if (carrito.length === 0) {
-        alert("No compraste nada");
-        return;
-    }
-
-    let subtotal = total;
-    let impuesto = subtotal * IGV;
-    let totalFinal = subtotal + impuesto;
-
-    let detalle = "🧾 RESUMEN DE COMPRA<br><br>";
-
-    carrito.forEach(function (item) {
-
-        detalle += "• " + item.nombre +
-            " - S/ " + item.precio + "<br>";
-
-    });
-
-    detalle += "<br>Subtotal: S/ " + subtotal.toFixed(2);
-    detalle += "<br>IGV: S/ " + impuesto.toFixed(2);
-    detalle += "<br><b>Total: S/ " + totalFinal.toFixed(2) + "</b>";
-
-    document.getElementById("resultado").innerHTML = detalle;
+let productos = []
 
 
-    let confirmar = confirm("¿Confirmar compra?");
+// ELEMENTOS DEL DOM
 
-    if (confirmar) {
-        alert("Compra exitosa. ¡Gracias!");
-        console.log("Compra confirmada");
-    }
+let nombreInput = document.getElementById("nombre")
+let precioInput = document.getElementById("precio")
+let cantidadInput = document.getElementById("cantidad")
 
-    else {
-        alert("Compra cancelada");
-        console.log("Compra cancelada");
-    }
+let lista = document.getElementById("listaProductos")
+let totalHTML = document.getElementById("total")
+
+let boton = document.getElementById("btnAgregar")
+
+
+// EVENTO
+
+boton.addEventListener("click", agregarProducto)
+
+
+// AGREGAR PRODUCTO
+
+function agregarProducto(){
+
+let nombre = nombreInput.value
+let precio = parseFloat(precioInput.value)
+let cantidad = parseInt(cantidadInput.value)
+
+if(nombre === "" || isNaN(precio) || isNaN(cantidad)){
+
+return
+
 }
+
+let producto = new Producto(productos.length+1, nombre, precio, cantidad)
+
+productos.push(producto)
+
+guardarProductos()
+
+mostrarProductos()
+
+limpiarInputs()
+
+}
+
+
+// MOSTRAR PRODUCTOS
+
+function mostrarProductos(){
+
+lista.innerHTML = ""
+
+let total = 0
+
+productos.forEach(producto => {
+
+lista.innerHTML += `
+<li>
+${producto.nombre} | Precio: $${producto.precio} | Cantidad: ${producto.cantidad}
+</li>
+`
+
+total += producto.subtotal
+
+})
+
+totalHTML.innerText = "Total: $" + total
+
+}
+
+
+// GUARDAR EN LOCALSTORAGE
+
+function guardarProductos(){
+
+localStorage.setItem("productos", JSON.stringify(productos))
+
+}
+
+
+// CARGAR PRODUCTOS
+
+function cargarProductos(){
+
+let productosGuardados = JSON.parse(localStorage.getItem("productos"))
+
+if(productosGuardados){
+
+productos = productosGuardados
+mostrarProductos()
+
+}
+
+}
+
+
+// LIMPIAR INPUTS
+
+function limpiarInputs(){
+
+nombreInput.value = ""
+precioInput.value = ""
+cantidadInput.value = ""
+
+}
+
+
+// INICIAR
+
+cargarProductos()
