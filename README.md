@@ -35,15 +35,16 @@ git clone https://github.com/Alv-brz/Proyecto-de-JS.git
 
 ## Estructura del proyecto
 
+```
 proyecto/
-
 ├── index.html
 ├── css/
 │   └── style.css
 ├── js/
 │   └── script.js
 └── data/
-└── productos.json
+    └── productos.json
+```
 
 ## Características técnicas
 
