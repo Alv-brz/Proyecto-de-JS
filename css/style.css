@@ -1,66 +1,50 @@
-body{
-
-font-family: Arial, Helvetica, sans-serif;
-background-color: #f4f4f4;
-text-align: center;
-padding: 30px;
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 30px;
 }
 
-h1{
-color:#333;
+h1 {
+  color: #333;
 }
 
-.formulario{
-
-margin:20px auto;
-padding:20px;
-background:white;
-width:300px;
-border-radius:8px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-
+/* CONTENEDOR PRODUCTOS */
+#contenedorProductos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-input{
-
-display:block;
-width:90%;
-padding:8px;
-margin:10px auto;
-
+/* TARJETA PRODUCTO */
+.producto {
+  margin: 15px;
+  padding: 15px;
+  background: white;
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-button{
-
-padding:10px 15px;
-background:#4CAF50;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-
+/* BOTONES */
+button {
+  padding: 10px 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-button:hover{
-
-background:#45a049;
-
+button:hover {
+  background: #45a049;
 }
 
-ul{
-
-list-style:none;
-padding:0;
-
-}
-
-li{
-
-background:white;
-margin:10px auto;
-padding:10px;
-width:300px;
-border-radius:5px;
-
+/* CARRITO */
+#carrito div {
+  background: white;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
 }

@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Compras</title>
+  <meta charset="UTF-8">
+  <title>Simulador Ecommerce</title>
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/style.css">
-
+  <!-- Toastify -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
-
 <body>
 
-    <h1>Simulador de Compras</h1>
+  <h1>🛒 Simulador Ecommerce</h1>
 
-    <div class="formulario">
+  <h2>Productos</h2>
+  <div id="contenedorProductos"></div>
 
-        <input type="text" id="nombre" placeholder="Nombre del producto">
+  <h2>Carrito</h2>
+  <div id="carrito"></div>
 
-        <input type="number" id="precio" placeholder="Precio">
+  <h3 id="total">Total: S/ 0</h3>
 
-        <input type="number" id="cantidad" placeholder="Cantidad">
+  <!-- Librería -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-        <button id="btnAgregar">Agregar Producto</button>
-
-    </div>
-
-    <h2>Lista de productos</h2>
-
-    <ul id="listaProductos"></ul>
-
-    <h3 id="total"></h3>
-
-    <script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
-
 </html>
