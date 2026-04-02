@@ -17,17 +17,17 @@ Permite al usuario:
 
 ## 🚀 Funcionalidades
 
-- 📦 Render dinámico de productos (Fetch + JSON)
-- 🛒 Carrito persistente con LocalStorage
-- ➕➖ Control de cantidades por producto
-- ❌ Eliminación individual de productos
-- 🗑️ Botón para vaciar carrito completo
-- 💰 Cálculo automático de total
-- 🚚 Cálculo de envío (gratis > S/300)
-- 📄 Checkout completo con validaciones
-- 💳 Validación de formulario (HTML5 + JS)
-- 📊 Generación de recibo con datos del cliente
-- 🔔 Notificaciones con SweetAlert2 (librería externa)
+-  Render dinámico de productos (Fetch + JSON)
+-  Carrito persistente con LocalStorage
+-  Control de cantidades por producto
+-  Eliminación individual de productos
+-  Botón para vaciar carrito completo
+-  Cálculo automático de total
+-  Cálculo de envío (gratis > S/300)
+-  Checkout completo con validaciones
+-  Validación de formulario (HTML5 + JS)
+-  Generación de recibo con datos del cliente
+-  Notificaciones con SweetAlert2 (librería externa)
 
 ---
 
@@ -121,7 +121,7 @@ index.html
 
 ## 👨‍💻 Autor
 
-Alvaro Berrospi
+Alvaro Berrospi Albornoz
 
 ---
 
