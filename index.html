@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title>Simulador Ecommerce</title>
+  <title>NovaTech</title>
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Toastify -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="js/utils.js" defer></script>
+  <script src="js/productos.js" defer></script>
 </head>
+
 <body>
 
-  <h1>🛒 Simulador Ecommerce</h1>
+  <header class="navbar">
+    <a href="index.html">NovaTech</a>
 
-  <h2>Productos</h2>
-  <div id="contenedorProductos"></div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="pages/carrito.html">
+        🛒 <span id="contadorCarrito">0</span>
+      </a>
+    </nav>
+  </header>
 
-  <h2>Carrito</h2>
-  <div id="carrito"></div>
+  <section class="banner-video">
+    <video autoplay muted loop playsinline>
+      <source src="video/audifonos.mp4" type="video/mp4">
+    </video>
+  </section>
 
-  <h3 id="total">Total: S/ 0</h3>
+  <h1 id="productos">Productos</h1>
 
-  <!-- Librería -->
-  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <div id="contenedorProductos" class="productos"></div>
 
-  <script src="js/script.js"></script>
+  <div id="toast" class="toast"></div>
+
 </body>
+
 </html>
