@@ -1,6 +1,6 @@
 # 🛒 Simulador Ecommerce - JavaScript
 
-## 📌 Descripción
+## Descripción
 
 Este proyecto consiste en un simulador interactivo de compras tipo Ecommerce, desarrollado con HTML, CSS y JavaScript puro.
 
@@ -15,7 +15,7 @@ Permite al usuario:
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 -  Render dinámico de productos (Fetch + JSON)
 -  Carrito persistente con LocalStorage
@@ -31,7 +31,7 @@ Permite al usuario:
 
 ---
 
-## 🧠 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - HTML5
 - CSS3
@@ -42,7 +42,7 @@ Permite al usuario:
 
 ---
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 ```
     proyecto/
     │
@@ -72,7 +72,7 @@ Permite al usuario:
 
 ```
 
-## 🔁 Flujo de la aplicación
+## Flujo de la aplicación
 
 1. Usuario visualiza productos
 2. Agrega productos al carrito
@@ -87,7 +87,7 @@ Permite al usuario:
 
 ---
 
-## ⚠️ Consideraciones
+## Consideraciones
 
 - No se implementa backend real (simulación con JSON)
 - No se usa pasarela de pagos real
@@ -96,7 +96,7 @@ Permite al usuario:
 
 ---
 
-## 🧪 Cómo ejecutar el proyecto
+## Cómo ejecutar el proyecto
 
 1. Clonar el repositorio:
 
@@ -110,7 +110,7 @@ index.html
 
 ---
 
-## 📌 Estado del proyecto
+## Estado del proyecto
 
 ✔ Proyecto finalizado  
 ✔ Cumple con requisitos de la consigna  
@@ -119,13 +119,13 @@ index.html
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Alvaro Berrospi Albornoz
 
 ---
 
-## 📎 Notas finales
+## Notas finales
 
 Este proyecto fue desarrollado como entrega final del curso de JavaScript, cumpliendo con:
 
